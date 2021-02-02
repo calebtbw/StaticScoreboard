@@ -1,0 +1,7 @@
+name: StaticScoreboard
+version: ${project.version}
+main: me.calebtbw.staticscoreboard.StaticScoreboard
+api-version: 1.16
+authors: [ CalebT ]
+description: Sidebar Scoreboards for Minecraft Servers
+website: http://calebtbw.me
