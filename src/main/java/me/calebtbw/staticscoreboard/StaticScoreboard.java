@@ -23,7 +23,7 @@ public final class StaticScoreboard extends JavaPlugin {
         Scoreboard board = Bukkit.getScoreboardManager().getNewScoreboard();
 
         Objective obj = board.registerNewObjective("test", "test2");
-        obj.setDisplayName(ChatColor.AQUA.toString() + ChatColor.BOLD + "SMP by BlazingLights");
+        obj.setDisplayName(ChatColor.AQUA.toString() + "SMP by " + ChatColor.DARK_RED + "Helevator");
         obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 
         Score website = obj.getScore(ChatColor.GOLD + "BlazingLights.ggs.gg");
@@ -35,11 +35,17 @@ public final class StaticScoreboard extends JavaPlugin {
         Score playerName = obj.getScore("IGN: " + player.getName());
         playerName.setScore(3);
 
-        Score blank2 = obj.getScore("");
+        Score blank2 = obj.getScore(" ");
         blank2.setScore(4);
 
+        Score location = obj.getScore("Location: " + player.getLocation());
+        location.setScore(5);
+
+        Score blank3 = obj.getScore("");
+        blank3.setScore(6);
+
         Score host = obj.getScore(ChatColor.BLUE + "by GGServers");
-        host.setScore(5);
+        host.setScore(7);
 
         player.setScoreboard(board);
 
